@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+    omada_exporter:
+        ports:
+            - '9202:9202'
+        environment:
+            - 'OMADA_HOST=https://192.168.0.21'
+            - OMADA_USER=reader
+#            - OMADA_PASS=mypassword
+            - OMADA_SITE=DLuss-DC
+        image: chhaley/omada_exporter
